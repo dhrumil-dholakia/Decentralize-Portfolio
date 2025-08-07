@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-family: 'Manrope', sans-serif;
+    
+    /* Modern Color Palette */
+    --color-bg: #0F172A;
+    --color-black: #020617;
+    --color-blue: #2563EB;
+    --color-sky: #38BDF8;
+    --color-card: rgba(30, 41, 59, 0.95);
+    --color-purple: #8B5CF6;
+    --color-pink: #EC4899;
+    
+    /* Additional Colors */
+    --color-text-primary: #F8FAFC;
+    --color-text-secondary: #94A3B8;
+    --color-border: rgba(56, 189, 248, 0.2);
+    --color-gradient-primary: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+    --color-gradient-bg: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    --color-gradient-card: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%);
+    --color-gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--color-bg);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background: var(--color-blue);
+    color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-blue);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-sky);
+}
+
+/* Global Transitions */
+a, button, input {
+    transition: all 0.3s ease;
+}
+
+/* Global Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Prevent horizontal scroll */
+.container {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+

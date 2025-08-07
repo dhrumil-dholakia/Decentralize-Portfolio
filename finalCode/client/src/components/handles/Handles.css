@@ -1,0 +1,54 @@
+.socials {
+    background: var(--color-gradient-bg);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9.375rem;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.socials::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    top: -25%;
+    right: -25%;
+    animation: rotate 20s linear infinite reverse;
+}
+
+.socials .icon {
+    color: var(--color-sky);
+    height: 3.75rem;
+    width: 3.75rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 4px 6px rgba(56, 189, 248, 0.2));
+    position: relative;
+    z-index: 1;
+}
+
+.socials .icon:hover {
+    transform: translateY(-8px) scale(1.1) rotate(8deg);
+    color: var(--color-purple);
+    filter: drop-shadow(0 8px 20px rgba(139, 92, 246, 0.4));
+}
+
+@media screen and (max-width: 420px) {
+    .socials {
+        gap: 2.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .socials .icon {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}

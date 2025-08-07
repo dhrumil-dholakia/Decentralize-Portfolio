@@ -1,0 +1,120 @@
+:root {
+    --color-blue: #2d2fef;
+    --color-bg: #1b1c3b;
+    --color-accent: #5658e2;
+  }
+  
+  /* ========== RESET ========== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f1a;
+  }
+  
+  /* ========== HEADER ========== */
+  .header {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(90deg, #2d2fef, #3e3ff1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    position: relative; /* <–– Not fixed */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+  
+  .header a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .header a:hover {
+    color: #ffdd57;
+    text-shadow: 0 0 10px #ffdd57;
+  }
+  
+  /* ========== BUTTON ========== */
+  .connectBTN {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #5658e2, #6a70f2);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(86, 88, 226, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .connectBTN:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #6a70f2, #3f42c8);
+    box-shadow: 0 8px 24px rgba(86, 88, 226, 0.6);
+  }
+  
+  /* OPTIONAL glow effect */
+  .connectBTN::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 60%);
+    animation: pulse 2.5s infinite;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 0 30px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    .header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 20px;
+      height: auto;
+    }
+  
+    .connectBTN {
+      width: 140px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+  
