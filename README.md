@@ -104,12 +104,6 @@ http://localhost:5173
 
 ---
 
-## 🙌 Acknowledgements
-
-Thanks to the amazing open-source tools, communities, and frameworks that made this project possible.
-
----
-
 ## ⭐ Support
 
 If you found this project helpful:
